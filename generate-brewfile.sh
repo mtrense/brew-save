@@ -10,7 +10,7 @@ json=$(brew info --json=v2 --installed 2>/dev/null)
 
 # Taps
 echo "$taps" | while read -r tap; do
-  echo "tap \"$tap\""
+  [ -n "$tap" ] && echo "tap \"$tap\""
 done
 echo
 
